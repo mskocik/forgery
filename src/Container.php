@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\Extend\DI;
+namespace Mskocik\ForgeryDI;
 
 use Core\Utils\InstanceEnum;
 use Nette;
