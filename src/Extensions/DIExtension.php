@@ -1,6 +1,6 @@
 <?php
 
-namespace Mskocik\Forgery\Extensions;
+namespace Mskocik\ForgeryDI\Extensions;
 
 use Nette;
 
