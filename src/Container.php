@@ -2,7 +2,6 @@
 
 namespace Mskocik\ForgeryDI;
 
-use Core\Utils\InstanceEnum;
 use Nette;
 
 class Container extends Nette\DI\Container
@@ -20,7 +19,7 @@ class Container extends Nette\DI\Container
 
     public function make($className, $args, $type)
     {
-        if ($type === InstanceEnum::SHARED) {
+        if ($type === Instance::SHARED) {
             $this->auryn->share($className);
         }
         return $this->auryn->make($className, $args);
