@@ -2,7 +2,7 @@
 
 namespace Mskocik\ForgeryDI;
 
-class Instance extends SplEnum {
+final class Instance {
     const 
         SHARED = 0,
         UNIQUE = 1;
