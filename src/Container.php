@@ -3,6 +3,7 @@
 namespace Mskocik\ForgeryDI;
 
 use Nette;
+use Auryn\Reflector;
 
 class Container extends Nette\DI\Container
 {
@@ -11,10 +12,10 @@ class Container extends Nette\DI\Container
 	
 	protected static $self = null;
 
-    public function initAuryn()
+    public function initAuryn(Reflector $reflector = null)
     {   
         // TODO: create CacheReflector
-        $this->auryn = new Injector(null, $this);
+        $this->auryn = new Injector($reflector, $this);
     }
 
     public function make($className, $args, $type)

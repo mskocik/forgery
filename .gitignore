@@ -288,4 +288,5 @@ __pycache__/
 *.xsd.cs
 
 vendor/
+test/temp/cache
 composer.lock

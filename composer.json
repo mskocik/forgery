@@ -6,7 +6,10 @@
         "rdlowrey/auryn": "^1.4"
     },
     "require-dev": {
-        "nette/di": "^2.4"
+        "nette/bootstrap": "^2.4",
+        "nette/di": "^2.4",
+        "nette/neon": "^2.4",
+        "nette/tester": "^2.0"
     },
     "autoload": {
         "psr-4": {

@@ -11,7 +11,7 @@ class Injector extends Auryn\Injector
     /** @var Container */
     private $container;
 
-    public function __construct( $reflector = null, Container $container) 
+    public function __construct($reflector = null, Container $container) 
     {
         parent::__construct($reflector);
         $this->container = $container;

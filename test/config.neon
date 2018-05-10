@@ -1,0 +1,6 @@
+DI:
+    parentClass: Mskocik\ForgeryDI\Container
+
+extensions:
+    DI: Nette\DI\Extensions\DIExtension
+    forgery: Mskocik\ForgeryDI\Extensions\DIExtension
