@@ -17,5 +17,7 @@
         "psr-4": {
             "Mskocik\\ForgeryDI\\": "src"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
