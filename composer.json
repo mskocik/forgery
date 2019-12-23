@@ -3,11 +3,12 @@
     "description": "Nette automatic DI container",
     "require": {
         "php": ">=7.2",
-        "rdlowrey/auryn": "^1.4"
+        "rdlowrey/auryn": "^1.4",
+        "nette/di": "^3.0",
+		"nette/utils": "^3.0"
     },
     "require-dev": {
         "nette/bootstrap": "^3.0",
-        "nette/di": "^3.0",
         "nette/neon": "^3.0",
         "nette/tester": "^2.3",
         "nette/caching": "^2.5"
