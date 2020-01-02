@@ -17,6 +17,11 @@ trait Forgery {
         return $this->aurynContainer->make($className, $args, $type);
     }
 
+    protected function defineForgeryParam(string $paramName, $value): void
+    {
+        $this->aurynContainer->defineAurynParam($paramName, $value);
+    }
+
     public function injectAuryn(NetteContainer $container): void
     {
         $this->aurynContainer = $container;

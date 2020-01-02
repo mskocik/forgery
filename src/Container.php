@@ -27,6 +27,11 @@ class Container extends Nette\DI\Container
         return $this->auryn->make($className, $args);
     }
 
+    public function defineAurynParam(string $paramName, $paramValue): void 
+    {
+        $this->auryn->defineParam($paramName, $paramValue);
+    }
+
     /**
      * OVERRIDING default implementation using Auryn DI
      * 
