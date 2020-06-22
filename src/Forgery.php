@@ -22,6 +22,11 @@ trait Forgery {
         $this->aurynContainer->defineAurynParam($paramName, $value);
     }
 
+    protected function defineForgeryDelegate(string $paramName, $value): void
+    {
+        $this->aurynContainer->defineAurynDelegate($paramName, $value);
+    }
+
     public function injectAuryn(NetteContainer $container): void
     {
         $this->aurynContainer = $container;
