@@ -18,6 +18,10 @@ trait Forgery {
             $this->aurynContainer->addAurynDefinition($className, $args[Container::FORGERY_DEFINE]);
             unset($args[Container::FORGERY_DEFINE]);
         }
+        if (isset($args[Container::FORGERY_ALIAS])) {
+            $this->aurynContainer->addAurynAlias($className, $args[Container::FORGERY_ALIAS]);
+            unset($args[Container::FORGERY_ALIAS]);
+        }
         return $this->aurynContainer->make($className, $args, $type);
     }
 
