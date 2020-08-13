@@ -14,6 +14,10 @@ trait Forgery {
 
     protected function forge(string $className, array $args = [], int $type = Container::INSTANCE_SHARED)
     {
+        if (isset($args[Container::FORGERY_DEFINE])) {
+            $this->aurynContainer->addAurynDefinition($className, $args[Container::FORGERY_DEFINE]);
+            unset($args[Container::FORGERY_DEFINE]);
+        }
         return $this->aurynContainer->make($className, $args, $type);
     }
 

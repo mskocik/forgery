@@ -10,6 +10,9 @@ class Container extends Nette\DI\Container
         INSTANCE_UNIQUE = 0,
         INSTANCE_SHARED = 1;
 
+    const
+        FORGERY_DEFINE = 'forgery_define';
+
     /** @var Injector */
     private $auryn; 
     
@@ -35,6 +38,11 @@ class Container extends Nette\DI\Container
     public function defineAurynDelegate(string $className, $callable): void
     {
         $this->auryn->delegate($className, $callable);
+    }
+
+    public function addAurynDefinition(string $className, array $definitions): void
+    {
+        $this->auryn->define($className, $definitions);
     }
 
     /**
