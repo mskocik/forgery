@@ -20,7 +20,7 @@ class Container extends Nette\DI\Container
     public function initAuryn()
     {   
         // TODO: create CacheReflector
-        $this->auryn = new Injector(null, $this);
+        $this->auryn = new Injector($this, null);
     }
 
     public function make($className, $args, $type)
