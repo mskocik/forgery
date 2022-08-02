@@ -1,11 +1,17 @@
 {
     "name": "mskocik/forgery",
     "description": "Nette automatic DI container",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mskocik/auryn"
+        }
+    ],
     "require": {
-        "php": ">=7.2",
-        "rdlowrey/auryn": "^1.4",
+        "php": ">=8.1",
         "nette/di": "^3.0",
-		"nette/utils": "^3.0"
+		"nette/utils": "^3.0",
+        "martin-hughes/auryn": "dev-nullfix"
     },
     "require-dev": {
         "nette/bootstrap": "^3.0",
