@@ -18,6 +18,11 @@
             "Auryn\\": "lib"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }

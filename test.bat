@@ -1,0 +1,1 @@
+.\vendor\bin\tester -w src -w tests\cases -w tests\Services
