@@ -12,6 +12,13 @@ trait Forgery {
     /** @var NetteContainer */
     private $aurynContainer;
 
+    /**
+     * @template T
+     * @param class-string<T> $className
+     * @param array $args
+     * @param int $type
+     * @return T
+     */
     protected function forge(string $className, array $args = [], int $type = Container::INSTANCE_SHARED)
     {
         if (isset($args[Container::FORGERY_DEFINE])) {
