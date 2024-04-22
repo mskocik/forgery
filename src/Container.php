@@ -57,9 +57,8 @@ class Container extends Nette\DI\Container
      * Creates new instance using autowiring.
      * @param  string  class
      * @param  array   arguments
-     * @return object
      */
-    public function createInstance($class, array $args = [])
+    public function createInstance($class, array $args = []): object
     {
         return $this->auryn->make($class, $args);
     }

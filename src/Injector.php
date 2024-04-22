@@ -8,14 +8,11 @@ use Nette\Utils\Arrays;
 
 class Injector extends Auryn\Injector
 {
-    /** @var Container */
-    private $container;
-
-    public function __construct(Container $container, ?Reflector $reflector = null) 
+    public function __construct(private Container $container, ?Reflector $reflector = null) 
     {
         parent::__construct($reflector);
         $this->container = $container;
-        foreach ($container->parameters as $key => $value) {
+        foreach ($container->getParameters() as $key => $value) {
             $this->defineParam($key, $value);
         }
     }
@@ -51,7 +48,7 @@ class Injector extends Auryn\Injector
                 if ($value[0] === '%') {
                     $value = \trim($value, '%');
                     $path = explode('.', $value);
-                    $param = Arrays::get($this->container->parameters, $path);
+                    $param = Arrays::get($this->container->getParameters(), $path);
                     $args[$key] = $param;
                     continue;
                 } 

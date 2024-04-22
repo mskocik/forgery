@@ -2,14 +2,13 @@
 
 namespace Mskocik\ForgeryDI;
 
-use Nette\DI\Container as NetteContainer;
 
 /**
  * Trait enabling dynamic object creation, 
  */
 trait Forgery {
 
-    /** @var NetteContainer */
+    /** @var Container */
     private $aurynContainer;
 
     /**
@@ -44,7 +43,7 @@ trait Forgery {
         $this->aurynContainer->defineAurynDelegate($paramName, $value);
     }
 
-    public function injectAuryn(NetteContainer $container): void
+    public function injectAuryn(Container $container): void
     {
         $this->aurynContainer = $container;
     }
