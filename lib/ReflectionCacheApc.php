@@ -7,7 +7,7 @@ class ReflectionCacheApc implements ReflectionCache
     private $localCache;
     private $timeToLive = 5;
 
-    public function __construct(ReflectionCache $localCache = null)
+    public function __construct(?ReflectionCache $localCache = null)
     {
         $this->localCache = $localCache ?: new ReflectionCacheArray;
     }
@@ -36,6 +36,6 @@ class ReflectionCacheApc implements ReflectionCache
     public function store($key, $data)
     {
         $this->localCache->store($key, $data);
-        apc_store($key, $data, $this->timeToLive);
+        \apc_store($key, $data, $this->timeToLive);
     }
 }
